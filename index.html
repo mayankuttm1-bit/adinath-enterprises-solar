@@ -67,6 +67,10 @@
       font-variation-settings: 'FILL' 1, 'wght' 600, 'GRAD' 0, 'opsz' 24;
     }
   </style>
+
+  <!-- Premium Animation Engine -->
+  <link rel="stylesheet" href="animations.css"/>
+  <script src="animations.js" defer></script>
 </head>
 <body class="bg-white text-slate-900 font-sans antialiased selection:bg-brand-amber selection:text-brand-navy">
 
@@ -178,10 +182,10 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left Hero Content -->
-        <div class="lg:col-span-7 space-y-6">
+        <div class="lg:col-span-7 space-y-6 reveal-left">
           
           <div class="inline-flex items-center gap-2 bg-slate-800 border border-slate-700 px-3 py-1 rounded-sm text-xs font-semibold text-slate-200">
-            <span class="w-2 h-2 rounded-full bg-brand-amber"></span>
+            <span class="w-2 h-2 rounded-full bg-brand-amber beacon-dot"></span>
             <span>Registered UPNEDA Vendor • Gujaini, Kanpur</span>
             <span class="text-slate-500">•</span>
             <span class="text-amber-400">4.8★ Google Rated</span>
@@ -196,30 +200,30 @@
           </p>
 
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm">
-              <div class="text-xl sm:text-2xl font-black text-brand-amber font-display">1.2+ MW</div>
+            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm hover-lift-subtle">
+              <div class="text-xl sm:text-2xl font-black text-brand-amber font-display" data-counter-target="1.2" data-counter-decimals="1" data-counter-suffix="+ MW">1.2+ MW</div>
               <div class="text-[11px] text-slate-400 uppercase font-semibold">Installed in UP</div>
             </div>
-            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm">
-              <div class="text-xl sm:text-2xl font-black text-white font-display">₹78,000</div>
+            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm hover-lift-subtle">
+              <div class="text-xl sm:text-2xl font-black text-white font-display" data-counter-target="78000" data-counter-prefix="₹">₹78,000</div>
               <div class="text-[11px] text-slate-400 uppercase font-semibold">Govt. Subsidy</div>
             </div>
-            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm">
-              <div class="text-xl sm:text-2xl font-black text-brand-blue font-display">25 Years</div>
+            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm hover-lift-subtle">
+              <div class="text-xl sm:text-2xl font-black text-brand-blue font-display" data-counter-target="25" data-counter-suffix=" Years">25 Years</div>
               <div class="text-[11px] text-slate-400 uppercase font-semibold">Panel Warranty</div>
             </div>
-            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm">
-              <div class="text-xl sm:text-2xl font-black text-emerald-400 font-display">4.8★</div>
+            <div class="bg-slate-800 border border-slate-700 p-3 rounded-sm hover-lift-subtle">
+              <div class="text-xl sm:text-2xl font-black text-emerald-400 font-display" data-counter-target="4.8" data-counter-decimals="1" data-counter-suffix="★">4.8★</div>
               <div class="text-[11px] text-slate-400 uppercase font-semibold">25+ Reviews</div>
             </div>
           </div>
 
           <div class="flex flex-wrap items-center gap-4 pt-4">
-            <a href="#calculator" class="px-6 py-3.5 bg-brand-amber hover:bg-brand-amberDark text-slate-950 font-bold text-sm rounded-sm transition-colors flex items-center gap-2">
+            <a href="#calculator" class="btn-press px-6 py-3.5 bg-brand-amber hover:bg-brand-amberDark text-slate-950 font-bold text-sm rounded-sm transition-colors flex items-center gap-2">
               <span class="material-symbols-outlined text-lg">calculate</span>
               <span>Calculate Solar Subsidy</span>
             </a>
-            <a href="https://wa.me/919889829117?text=Hi%20Adinath%20Enterprises,%20I%20want%20to%20book%20a%20free%20rooftop%20site%20survey%20in%20Kanpur." target="_blank" class="px-6 py-3.5 bg-brand-emerald hover:bg-brand-emeraldDark text-white font-bold text-sm rounded-sm transition-colors flex items-center gap-2">
+            <a href="https://wa.me/919889829117?text=Hi%20Adinath%20Enterprises,%20I%20want%20to%20book%20a%20free%20rooftop%20site%20survey%20in%20Kanpur." target="_blank" class="btn-press px-6 py-3.5 bg-brand-emerald hover:bg-brand-emeraldDark text-white font-bold text-sm rounded-sm transition-colors flex items-center gap-2">
               <span class="material-symbols-outlined text-lg">calendar_month</span>
               <span>Book Free Site Survey</span>
             </a>
@@ -234,18 +238,19 @@
         </div>
 
         <!-- Right Hero Visual -->
-        <div class="lg:col-span-5 relative">
-          <div class="relative border-2 border-slate-700 rounded-sm overflow-hidden bg-slate-800 shadow-2xl">
+        <div class="lg:col-span-5 relative reveal-right">
+          <div class="group relative border-2 border-slate-700 rounded-sm overflow-hidden bg-slate-800 shadow-2xl hover-lift">
             <img src="images/hero-solar.jpg" 
                  alt="Residential Solar Rooftop Installation by Adinath Enterprises" 
-                 class="w-full h-80 sm:h-96 object-cover"/>
+                 class="w-full h-80 sm:h-96 object-cover img-zoom"/>
             <div class="absolute bottom-4 left-4 right-4 bg-slate-900 border border-slate-700 p-3 rounded-sm flex items-center justify-between">
               <div>
                 <p class="text-xs text-slate-400 font-medium">Recent Kanpur Installation</p>
                 <p class="text-sm font-bold text-white">5 kW On-Grid Rooftop System</p>
                 <p class="text-[11px] text-amber-400">Monthly Bill: ₹6,500 → ₹180</p>
               </div>
-              <span class="bg-brand-emerald text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider">
+              <span class="bg-brand-emerald text-white text-[10px] font-bold px-2 py-1 rounded-sm uppercase tracking-wider flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-white beacon-dot"></span>
                 Active
               </span>
             </div>
@@ -257,15 +262,15 @@
   </section>
 
   <!-- 4. ABOUT US SECTION -->
-  <section id="about" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+  <section id="about" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
-        <div class="lg:col-span-5">
-          <div class="relative border border-slate-300 rounded-sm overflow-hidden bg-white p-2 shadow-sm">
+        <div class="lg:col-span-5 reveal-left">
+          <div class="group relative border border-slate-300 rounded-sm overflow-hidden bg-white p-2 shadow-sm hover-lift">
             <img src="images/engineer-audit.jpg" 
                  alt="Solar Engineer Adinath Enterprises Gujaini Kanpur" 
-                 class="w-full h-80 object-cover rounded-sm"/>
+                 class="w-full h-80 object-cover rounded-sm img-zoom"/>
             <div class="p-4 bg-white">
               <div class="flex items-center gap-3">
                 <img src="adinath_logo_transparent.png" alt="Adinath Logo" class="h-10 w-auto"/>
@@ -278,7 +283,7 @@
           </div>
         </div>
 
-        <div class="lg:col-span-7 space-y-5">
+        <div class="lg:col-span-7 space-y-5 reveal-right">
           <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
             About Our Company
           </div>
@@ -293,17 +298,17 @@
           </p>
 
           <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-            <div class="border border-slate-200 bg-white p-4 rounded-sm">
+            <div class="border border-slate-200 bg-white p-4 rounded-sm hover-lift-subtle">
               <span class="material-symbols-outlined text-brand-amber text-2xl mb-1">verified_user</span>
               <h4 class="font-bold text-sm text-brand-navy">UPNEDA Approved</h4>
               <p class="text-xs text-slate-500 mt-1">Official vendor listed for UP solar subsidy programs.</p>
             </div>
-            <div class="border border-slate-200 bg-white p-4 rounded-sm">
+            <div class="border border-slate-200 bg-white p-4 rounded-sm hover-lift-subtle">
               <span class="material-symbols-outlined text-brand-blue text-2xl mb-1">electric_meter</span>
               <h4 class="font-bold text-sm text-brand-navy">KESCo Net-Metering</h4>
               <p class="text-xs text-slate-500 mt-1">100% DISCOM liaisoning and bi-directional meter setup.</p>
             </div>
-            <div class="border border-slate-200 bg-white p-4 rounded-sm">
+            <div class="border border-slate-200 bg-white p-4 rounded-sm hover-lift-subtle">
               <span class="material-symbols-outlined text-brand-emerald text-2xl mb-1">handshake</span>
               <h4 class="font-bold text-sm text-brand-navy">Local Gujaini Office</h4>
               <p class="text-xs text-slate-500 mt-1">Open 7 days a week with dependable local post-sales support.</p>
@@ -319,7 +324,7 @@
   <section class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
         <span class="bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
           Proven Reliability
         </span>
@@ -333,7 +338,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover:border-brand-amber transition-colors">
+        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover-lift reveal delay-100">
           <div class="w-10 h-10 bg-brand-navy text-amber-400 rounded-sm flex items-center justify-center mb-4">
             <span class="material-symbols-outlined text-2xl">account_balance</span>
           </div>
@@ -343,7 +348,7 @@
           </p>
         </div>
 
-        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover:border-brand-amber transition-colors">
+        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover-lift reveal delay-200">
           <div class="w-10 h-10 bg-brand-navy text-brand-blue rounded-sm flex items-center justify-center mb-4">
             <span class="material-symbols-outlined text-2xl">shield</span>
           </div>
@@ -353,7 +358,7 @@
           </p>
         </div>
 
-        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover:border-brand-amber transition-colors">
+        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover-lift reveal delay-300">
           <div class="w-10 h-10 bg-brand-navy text-emerald-400 rounded-sm flex items-center justify-center mb-4">
             <span class="material-symbols-outlined text-2xl">speed</span>
           </div>
@@ -363,7 +368,7 @@
           </p>
         </div>
 
-        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover:border-brand-amber transition-colors">
+        <div class="border border-slate-200 p-6 rounded-sm bg-slate-50 hover-lift reveal delay-400">
           <div class="w-10 h-10 bg-brand-navy text-amber-400 rounded-sm flex items-center justify-center mb-4">
             <span class="material-symbols-outlined text-2xl">star</span>
           </div>
@@ -376,7 +381,7 @@
       </div>
 
       <!-- Trust Badges Bar -->
-      <div class="mt-10 border border-slate-200 p-4 bg-white rounded-sm flex flex-wrap items-center justify-around gap-6 text-xs text-slate-700 font-semibold">
+      <div class="mt-10 border border-slate-200 p-4 bg-white rounded-sm flex flex-wrap items-center justify-around gap-6 text-xs text-slate-700 font-semibold reveal">
         <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-brand-emerald">check_circle</span> MNRE Empanelled</span>
         <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-brand-emerald">check_circle</span> UPNEDA Registered</span>
         <span class="flex items-center gap-1.5"><span class="material-symbols-outlined text-brand-emerald">check_circle</span> KESCo DISCOM Approved</span>
@@ -388,10 +393,10 @@
   </section>
 
   <!-- 6. COMPREHENSIVE SERVICES SECTION (EXPANDED & DETAILED) -->
-  <section id="services" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+  <section id="services" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 reveal">
         <div>
           <span class="bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
             Our Solutions
@@ -408,8 +413,10 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         
         <!-- Service 1: Residential Rooftop -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover:border-slate-400 transition-colors shadow-sm">
-          <img src="images/residential-solar.jpg" alt="Residential Rooftop Solar" class="w-full h-44 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover-lift transition-all shadow-sm reveal delay-100">
+          <div class="overflow-hidden">
+            <img src="images/residential-solar.jpg" alt="Residential Rooftop Solar" class="w-full h-44 object-cover img-zoom"/>
+          </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-sm uppercase">1 kW to 10 kW</span>
@@ -418,15 +425,17 @@
                 Eligible for PM Surya Ghar ₹78,000 DBT subsidy. Enjoy near-zero electricity bills with net-metering.
               </p>
             </div>
-            <a href="residential-solar.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1">
+            <a href="residential-solar.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Explore Residential <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
 
         <!-- Service 2: Commercial EPC -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover:border-slate-400 transition-colors shadow-sm">
-          <img src="images/industrial-solar.jpg" alt="Commercial and Industrial Solar EPC" class="w-full h-44 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover-lift transition-all shadow-sm reveal delay-200">
+          <div class="overflow-hidden">
+            <img src="images/industrial-solar.jpg" alt="Commercial and Industrial Solar EPC" class="w-full h-44 object-cover img-zoom"/>
+          </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-blue-600 bg-blue-50 px-2 py-0.5 rounded-sm uppercase">25 kW to 500 kW+</span>
@@ -435,15 +444,17 @@
                 Custom rooftop and shed solar for factories, cold storages, hospitals, and educational institutions with 40% depreciation.
               </p>
             </div>
-            <a href="commercial-solar.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1">
+            <a href="commercial-solar.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Explore Industrial <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
 
         <!-- Service 3: Hybrid & Battery Storage -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover:border-slate-400 transition-colors shadow-sm">
-          <img src="images/battery-storage.jpg" alt="Solar Inverters and Battery Banks" class="w-full h-44 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover-lift transition-all shadow-sm reveal delay-300">
+          <div class="overflow-hidden">
+            <img src="images/battery-storage.jpg" alt="Solar Inverters and Battery Banks" class="w-full h-44 object-cover img-zoom"/>
+          </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2 py-0.5 rounded-sm uppercase">Uninterrupted Power</span>
@@ -452,15 +463,17 @@
                 High-cycle Lithium and tubular battery banks to guarantee 24x7 power security during Kanpur grid outages.
               </p>
             </div>
-            <a href="solar-products.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1">
+            <a href="solar-products.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               View Inverters & Batteries <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
 
         <!-- Service 4: Agricultural Solar Water Pumping -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover:border-slate-400 transition-colors shadow-sm">
-          <img src="images/commercial-plant.jpg" alt="Agricultural Solar Water Pump" class="w-full h-44 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover-lift transition-all shadow-sm reveal delay-100">
+          <div class="overflow-hidden">
+            <img src="images/commercial-plant.jpg" alt="Agricultural Solar Water Pump" class="w-full h-44 object-cover img-zoom"/>
+          </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-sm uppercase">PM-KUSUM Ready</span>
@@ -469,15 +482,17 @@
                 Solar submersible pumps (3HP–10HP) for irrigation, agricultural farms, greenhouses, and rural tubewells around Kanpur rural.
               </p>
             </div>
-            <a href="contact.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1">
+            <a href="contact.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Inquire Pump Setup <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
 
         <!-- Service 5: Institutional & School Solar -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover:border-slate-400 transition-colors shadow-sm">
-          <img src="images/factory-shed.jpg" alt="Institutional and School Solar" class="w-full h-44 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover-lift transition-all shadow-sm reveal delay-200">
+          <div class="overflow-hidden">
+            <img src="images/factory-shed.jpg" alt="Institutional and School Solar" class="w-full h-44 object-cover img-zoom"/>
+          </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-purple-700 bg-purple-50 px-2 py-0.5 rounded-sm uppercase">Campus Solutions</span>
@@ -486,15 +501,17 @@
                 Zero-investment RESCO and CAPEX models for schools, degree colleges, healthcare clinics, and private universities.
               </p>
             </div>
-            <a href="commercial-solar.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1">
+            <a href="commercial-solar.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Explore Campus Solar <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
 
         <!-- Service 6: Operation & Maintenance (O&M) -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover:border-slate-400 transition-colors shadow-sm">
-          <img src="images/solar-panels.jpg" alt="Solar Maintenance and Operations" class="w-full h-44 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden flex flex-col hover-lift transition-all shadow-sm reveal delay-300">
+          <div class="overflow-hidden">
+            <img src="images/solar-panels.jpg" alt="Solar Maintenance and Operations" class="w-full h-44 object-cover img-zoom"/>
+          </div>
           <div class="p-5 flex-1 flex flex-col justify-between">
             <div>
               <span class="text-[10px] font-bold text-slate-600 bg-slate-100 px-2 py-0.5 rounded-sm uppercase">Full Life Care</span>
@@ -503,7 +520,7 @@
                 Panel health inspection, junction box check, string testing, inverter firmware updates, and periodic deep cleaning.
               </p>
             </div>
-            <a href="contact.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1">
+            <a href="contact.html" class="mt-4 text-xs font-bold text-brand-blue hover:text-brand-blueDark inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
               Book Maintenance <span class="material-symbols-outlined text-sm">arrow_forward</span>
             </a>
           </div>
@@ -514,10 +531,10 @@
   </section>
 
   <!-- 7. NEW SECTION 1: 25-YEAR SOLAR ROI VS GRID BILL INFLATION MATRIX -->
-  <section class="py-16 bg-white border-b border-slate-200">
+  <section class="py-16 bg-white border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
         <span class="bg-emerald-100 text-emerald-900 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
           Financial Compounding
         </span>
@@ -530,7 +547,7 @@
       </div>
 
       <!-- Financial Comparison Table (Sharp Solid Styling) -->
-      <div class="border border-slate-200 rounded-sm overflow-x-auto shadow-sm">
+      <div class="border border-slate-200 rounded-sm overflow-x-auto shadow-sm reveal hover-lift-subtle">
         <table class="w-full text-left text-xs border-collapse">
           <thead>
             <tr class="bg-brand-navy text-white font-display uppercase tracking-wider">
@@ -573,10 +590,10 @@
   </section>
 
   <!-- 8. WORKING PROCEDURE SECTION (5 STEPS) -->
-  <section class="py-16 bg-slate-50 border-b border-slate-200">
+  <section class="py-16 bg-slate-50 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
         <span class="bg-slate-200 text-slate-800 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
           How It Works
         </span>
@@ -590,7 +607,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
         
-        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm">
+        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm hover-lift reveal delay-100">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="font-display font-black text-2xl text-slate-400">01</span>
@@ -602,7 +619,7 @@
           <span class="text-[10px] text-brand-blue font-bold uppercase mt-4">Day 1</span>
         </div>
 
-        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm">
+        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm hover-lift reveal delay-200">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="font-display font-black text-2xl text-slate-400">02</span>
@@ -614,7 +631,7 @@
           <span class="text-[10px] text-brand-blue font-bold uppercase mt-4">Day 2</span>
         </div>
 
-        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm">
+        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm hover-lift reveal delay-300">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="font-display font-black text-2xl text-slate-400">03</span>
@@ -626,7 +643,7 @@
           <span class="text-[10px] text-brand-blue font-bold uppercase mt-4">Day 3–7</span>
         </div>
 
-        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm">
+        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm hover-lift reveal delay-400">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="font-display font-black text-2xl text-slate-400">04</span>
@@ -638,7 +655,7 @@
           <span class="text-[10px] text-brand-blue font-bold uppercase mt-4">Day 8–9</span>
         </div>
 
-        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm">
+        <div class="border border-slate-200 bg-white p-5 rounded-sm flex flex-col justify-between shadow-sm hover-lift reveal delay-500">
           <div>
             <div class="flex items-center justify-between mb-3">
               <span class="font-display font-black text-2xl text-slate-400">05</span>
@@ -656,10 +673,10 @@
   </section>
 
   <!-- 9. NEW SECTION 2: KANPUR CITY & INDUSTRIAL BELT COVERAGE DIRECTORY -->
-  <section class="py-16 bg-white border-b border-slate-200">
+  <section class="py-16 bg-white border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
         <span class="bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
           Local Kanpur Coverage
         </span>
@@ -672,27 +689,27 @@
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3 text-center text-xs">
-        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy">
+        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy hover-lift-subtle reveal delay-75">
           📍 Gujaini & Barra
         </div>
-        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy">
+        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy hover-lift-subtle reveal delay-150">
           📍 Kidwai Nagar & Yashoda
         </div>
-        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy">
+        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy hover-lift-subtle reveal delay-200">
           📍 Govind Nagar & Fazalganj
         </div>
-        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy">
+        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy hover-lift-subtle reveal delay-250">
           📍 Panki Industrial Area
         </div>
-        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy">
+        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy hover-lift-subtle reveal delay-300">
           📍 Dada Nagar & Rania
         </div>
-        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy">
+        <div class="border border-slate-200 p-3.5 rounded-sm bg-slate-50 font-semibold text-brand-navy hover-lift-subtle reveal delay-400">
           📍 Swaroop Nagar & Civil Lines
         </div>
       </div>
 
-      <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-sm flex items-center justify-between flex-wrap gap-3 text-xs text-amber-950 font-medium">
+      <div class="mt-6 p-4 bg-amber-50 border border-amber-200 rounded-sm flex items-center justify-between flex-wrap gap-3 text-xs text-amber-950 font-medium reveal">
         <span>⚡ <strong>Same-Day Survey Guarantee:</strong> Call before 12:00 PM for same-day solar shadow audit anywhere in Kanpur Urban.</span>
         <a href="tel:+919889829117" class="font-bold underline text-brand-navy hover:text-amber-800">Schedule Now →</a>
       </div>
@@ -701,13 +718,13 @@
   </section>
 
   <!-- 10. INTERACTIVE SOLAR SUBSIDY CALCULATOR -->
-  <section id="calculator" class="py-16 sm:py-20 bg-slate-900 text-white border-b border-slate-800">
+  <section id="calculator" class="py-16 sm:py-20 bg-slate-900 text-white border-b border-slate-800 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         <!-- Left: Interactive Controls -->
-        <div class="lg:col-span-6 space-y-6">
+        <div class="lg:col-span-6 space-y-6 reveal-left">
           <div class="inline-block bg-slate-800 text-amber-400 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
             Kanpur Solar Sizing Engine
           </div>
@@ -718,7 +735,7 @@
             Drag the slider to your average monthly electricity bill to see your government subsidy and expected monthly savings.
           </p>
 
-          <div class="bg-slate-800 border border-slate-700 p-6 rounded-sm space-y-5">
+          <div class="bg-slate-800 border border-slate-700 p-6 rounded-sm space-y-5 hover-lift-subtle">
             <div class="flex justify-between items-center">
               <label for="bill-slider" class="text-sm font-semibold text-slate-200">Average Monthly Electricity Bill:</label>
               <span id="bill-display" class="font-display font-black text-2xl text-brand-amber">₹3,500</span>
@@ -743,15 +760,16 @@
         </div>
 
         <!-- Right: Results Card -->
-        <div class="lg:col-span-6">
-          <div class="bg-slate-950 border-2 border-slate-700 p-6 sm:p-8 rounded-sm space-y-6">
+        <div class="lg:col-span-6 reveal-right">
+          <div class="bg-slate-950 border-2 border-slate-700 p-6 sm:p-8 rounded-sm space-y-6 hover-lift">
             
             <div class="flex items-center justify-between border-b border-slate-800 pb-4">
               <div>
                 <h3 class="font-display font-bold text-lg text-white">Feasibility Summary</h3>
                 <p class="text-xs text-slate-400">Customised for Kanpur rooftop conditions</p>
               </div>
-              <span class="bg-brand-emerald text-white text-xs font-bold px-2 py-1 rounded-sm uppercase">
+              <span class="bg-brand-emerald text-white text-xs font-bold px-2 py-1 rounded-sm uppercase flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-white beacon-dot"></span>
                 Subsidy Approved
               </span>
             </div>
@@ -788,7 +806,7 @@
                 <p class="text-xs text-slate-400">Estimated Net Investment (Post-Subsidy)</p>
                 <p id="net-cost" class="text-xl font-black text-white font-display">₹1,15,000 – ₹1,30,000</p>
               </div>
-              <a id="calc-whatsapp-btn" href="https://wa.me/919889829117?text=Hello%20Adinath%20Enterprises,%20my%20monthly%20bill%20is%20₹3500.%20I%20want%20to%20apply%20for%20a%203kW%20rooftop%20system%20with%20subsidy." target="_blank" class="w-full sm:w-auto px-5 py-3 bg-brand-amber hover:bg-brand-amberDark text-slate-950 font-bold text-xs rounded-sm transition-colors flex items-center justify-center gap-1.5">
+              <a id="calc-whatsapp-btn" href="https://wa.me/919889829117?text=Hello%20Adinath%20Enterprises,%20my%20monthly%20bill%20is%20₹3500.%20I%20want%20to%20apply%20for%20a%203kW%20rooftop%20system%20with%20subsidy." target="_blank" class="btn-press w-full sm:w-auto px-5 py-3 bg-brand-amber hover:bg-brand-amberDark text-slate-950 font-bold text-xs rounded-sm transition-colors flex items-center justify-center gap-1.5">
                 <span class="material-symbols-outlined text-base">chat</span>
                 <span>Get This System On WhatsApp</span>
               </a>
@@ -803,10 +821,10 @@
   </section>
 
   <!-- 11. PROJECTS SHOWCASE SECTION (KANPUR SITES) -->
-  <section id="projects" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+  <section id="projects" class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 reveal">
         <div>
           <span class="bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
             Completed Installations
@@ -823,9 +841,11 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         
         <!-- Project 1 -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm">
-          <img src="images/residential-solar.jpg" 
-               alt="Gujaini Kanpur Residential Solar" class="w-full h-48 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover-lift reveal delay-100">
+          <div class="overflow-hidden">
+            <img src="images/residential-solar.jpg" 
+                 alt="Gujaini Kanpur Residential Solar" class="w-full h-48 object-cover img-zoom"/>
+          </div>
           <div class="p-5 space-y-2">
             <div class="flex justify-between items-center">
               <span class="text-[10px] font-bold text-amber-700 bg-amber-50 px-2 py-0.5 rounded-sm uppercase">Residential</span>
@@ -841,9 +861,11 @@
         </div>
 
         <!-- Project 2 -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm">
-          <img src="images/factory-shed.jpg" 
-               alt="Industrial Solar Plant Panki Kanpur" class="w-full h-48 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover-lift reveal delay-200">
+          <div class="overflow-hidden">
+            <img src="images/factory-shed.jpg" 
+                 alt="Industrial Solar Plant Panki Kanpur" class="w-full h-48 object-cover img-zoom"/>
+          </div>
           <div class="p-5 space-y-2">
             <div class="flex justify-between items-center">
               <span class="text-[10px] font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded-sm uppercase">Industrial</span>
@@ -859,9 +881,11 @@
         </div>
 
         <!-- Project 3 -->
-        <div class="bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm">
-          <img src="images/commercial-plant.jpg" 
-               alt="Swaroop Nagar Kanpur Villa Solar" class="w-full h-48 object-cover"/>
+        <div class="group bg-white border border-slate-200 rounded-sm overflow-hidden shadow-sm hover-lift reveal delay-300">
+          <div class="overflow-hidden">
+            <img src="images/commercial-plant.jpg" 
+                 alt="Swaroop Nagar Kanpur Villa Solar" class="w-full h-48 object-cover img-zoom"/>
+          </div>
           <div class="p-5 space-y-2">
             <div class="flex justify-between items-center">
               <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-sm uppercase">Hybrid Villa</span>
@@ -882,34 +906,34 @@
   </section>
 
   <!-- 12. TIER-1 AUTHORIZED BRANDS SHOWCASE -->
-  <section class="py-12 bg-white border-b border-slate-200">
+  <section class="py-12 bg-white border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-8">
+      <div class="text-center mb-8 reveal">
         <p class="text-xs uppercase font-bold text-slate-400 tracking-widest">Authorized Dealer & Installer for Tier-1 Brands</p>
       </div>
 
       <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
-        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50">
+        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50 hover-lift-subtle reveal delay-75">
           <span class="font-display font-black text-slate-800 text-sm tracking-tight">ADANI SOLAR</span>
           <p class="text-[9px] text-slate-500 uppercase">Monocrystalline DCR</p>
         </div>
-        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50">
+        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50 hover-lift-subtle reveal delay-150">
           <span class="font-display font-black text-slate-800 text-sm tracking-tight">WAAREE</span>
           <p class="text-[9px] text-slate-500 uppercase">TopCon Bifacial</p>
         </div>
-        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50">
+        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50 hover-lift-subtle reveal delay-200">
           <span class="font-display font-black text-slate-800 text-sm tracking-tight">TATA POWER</span>
           <p class="text-[9px] text-slate-500 uppercase">Solar Modules</p>
         </div>
-        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50">
+        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50 hover-lift-subtle reveal delay-250">
           <span class="font-display font-black text-slate-800 text-sm tracking-tight">LOOM SOLAR</span>
           <p class="text-[9px] text-slate-500 uppercase">High Efficiency</p>
         </div>
-        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50">
+        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50 hover-lift-subtle reveal delay-300">
           <span class="font-display font-black text-slate-800 text-sm tracking-tight">EASTMAN</span>
           <p class="text-[9px] text-slate-500 uppercase">Solar Inverters</p>
         </div>
-        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50">
+        <div class="border border-slate-200 p-3 rounded-sm text-center bg-slate-50 hover-lift-subtle reveal delay-400">
           <span class="font-display font-black text-slate-800 text-sm tracking-tight">POLYCAB</span>
           <p class="text-[9px] text-slate-500 uppercase">Cables & Panels</p>
         </div>
@@ -918,10 +942,10 @@
   </section>
 
   <!-- 13. GOOGLE REVIEWS SECTION (AUTHENTIC KANPUR CUSTOMERS) -->
-  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200">
+  <section class="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
         <div class="inline-flex items-center gap-1.5 bg-amber-100 text-amber-900 text-xs font-bold px-3 py-1 rounded-sm">
           <span class="material-symbols-outlined text-[15px] fill-1 text-amber-600">star</span>
           <span>4.8 Out Of 5 Rating (25+ Local Reviews)</span>
@@ -936,7 +960,7 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
-        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between hover-lift reveal delay-100">
           <div>
             <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
             <p class="text-xs text-slate-700 leading-relaxed italic mb-4">
@@ -949,7 +973,7 @@
           </div>
         </div>
 
-        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between hover-lift reveal delay-200">
           <div>
             <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
             <p class="text-xs text-slate-700 leading-relaxed italic mb-4">
@@ -962,7 +986,7 @@
           </div>
         </div>
 
-        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between hover-lift reveal delay-300">
           <div>
             <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
             <p class="text-xs text-slate-700 leading-relaxed italic mb-4">
@@ -975,7 +999,7 @@
           </div>
         </div>
 
-        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between">
+        <div class="bg-white border border-slate-200 p-6 rounded-sm shadow-sm flex flex-col justify-between hover-lift reveal delay-400">
           <div>
             <div class="flex text-amber-400 text-sm mb-3">★★★★★</div>
             <p class="text-xs text-slate-700 leading-relaxed italic mb-4">
@@ -994,10 +1018,10 @@
   </section>
 
   <!-- 14. FAQ SECTION -->
-  <section class="py-16 bg-white border-b border-slate-200">
+  <section class="py-16 bg-white border-b border-slate-200 overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center space-y-3 mb-12">
+      <div class="text-center space-y-3 mb-12 reveal">
         <span class="bg-slate-100 text-slate-800 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
           Got Questions?
         </span>
@@ -1008,7 +1032,7 @@
 
       <div class="space-y-3">
         
-        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue">
+        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue reveal delay-100">
           <summary class="flex justify-between items-center font-display font-bold text-sm text-brand-navy cursor-pointer list-none">
             <span>What is the maximum subsidy available under PM Surya Ghar Yojana?</span>
             <span class="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">expand_more</span>
@@ -1018,7 +1042,7 @@
           </p>
         </details>
 
-        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue">
+        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue reveal delay-200">
           <summary class="flex justify-between items-center font-display font-bold text-sm text-brand-navy cursor-pointer list-none">
             <span>Do I need to visit KESCo office for net-metering approvals?</span>
             <span class="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">expand_more</span>
@@ -1028,7 +1052,7 @@
           </p>
         </details>
 
-        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue">
+        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue reveal delay-300">
           <summary class="flex justify-between items-center font-display font-bold text-sm text-brand-navy cursor-pointer list-none">
             <span>How much rooftop space is required for a 3 kW solar system?</span>
             <span class="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">expand_more</span>
@@ -1038,7 +1062,7 @@
           </p>
         </details>
 
-        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue">
+        <details class="group border border-slate-200 p-4 rounded-sm bg-slate-50 open:bg-white open:border-brand-blue reveal delay-400">
           <summary class="flex justify-between items-center font-display font-bold text-sm text-brand-navy cursor-pointer list-none">
             <span>What happens during rainy days or Kanpur winter fog?</span>
             <span class="material-symbols-outlined text-slate-500 group-open:rotate-180 transition-transform">expand_more</span>
@@ -1054,10 +1078,10 @@
   </section>
 
   <!-- 15. CONTACT FORM & EMBEDDED GOOGLE MAP LOCATION (HOME PAGE) -->
-  <section id="contact-form" class="py-16 sm:py-20 bg-slate-900 text-white border-b border-slate-800">
+  <section id="contact-form" class="py-16 sm:py-20 bg-slate-900 text-white border-b border-slate-800 overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12">
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-12 reveal">
         <span class="bg-amber-400 text-slate-950 text-xs font-bold px-2.5 py-1 rounded-sm uppercase tracking-wider">
           Visit Us In Gujaini
         </span>
@@ -1072,9 +1096,9 @@
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
         
         <!-- Left: Office Card & Embedded Google Map -->
-        <div class="lg:col-span-5 space-y-4">
+        <div class="lg:col-span-5 space-y-4 reveal-left">
           
-          <div class="bg-slate-950 border border-slate-800 p-5 rounded-sm space-y-3">
+          <div class="bg-slate-950 border border-slate-800 p-5 rounded-sm space-y-3 hover-lift-subtle">
             <div class="flex items-center gap-3">
               <span class="material-symbols-outlined text-brand-amber text-2xl">location_on</span>
               <div>
@@ -1085,12 +1109,15 @@
             <div class="flex items-center gap-4 text-xs pt-2 border-t border-slate-800 text-slate-300">
               <span><strong>Phone:</strong> <a href="tel:+919889829117" class="text-amber-400 hover:underline">+91 98898 29117</a></span>
               <span>•</span>
-              <span class="text-emerald-400 font-semibold">Open 7 Days (9:30 AM – 10:00 PM)</span>
+              <span class="text-emerald-400 font-semibold flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 beacon-dot"></span>
+                Open 7 Days
+              </span>
             </div>
           </div>
 
           <!-- Embedded Interactive Google Map Location on Home Page -->
-          <div class="border border-slate-800 rounded-sm overflow-hidden bg-slate-950 p-1.5 shadow-xl">
+          <div class="border border-slate-800 rounded-sm overflow-hidden bg-slate-950 p-1.5 shadow-xl hover-lift">
             <iframe 
               src="https://maps.google.com/maps?q=26.439855,80.277747&z=15&output=embed" 
               class="w-full h-72 rounded-sm border-0" 
@@ -1107,7 +1134,7 @@
         </div>
 
         <!-- Right: Survey Form -->
-        <div class="lg:col-span-7 bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-sm shadow-xl">
+        <div class="lg:col-span-7 bg-slate-950 border border-slate-800 p-6 sm:p-8 rounded-sm shadow-xl reveal-right">
           <h3 class="font-display font-bold text-lg text-white mb-2">Book Free Rooftop Inspection</h3>
           <p class="text-xs text-slate-400 mb-6">Enter your details and our Kanpur engineering team will call you within 2 hours.</p>
 
@@ -1157,7 +1184,7 @@
               </div>
             </div>
 
-            <button type="submit" class="w-full py-3.5 bg-brand-amber hover:bg-brand-amberDark text-slate-950 font-bold text-sm rounded-sm transition-colors flex items-center justify-center gap-2">
+            <button type="submit" class="btn-press w-full py-3.5 bg-brand-amber hover:bg-brand-amberDark text-slate-950 font-bold text-sm rounded-sm transition-colors flex items-center justify-center gap-2">
               <span class="material-symbols-outlined text-lg">send</span>
               <span>Submit & Send to WhatsApp</span>
             </button>
@@ -1247,7 +1274,7 @@
   <div class="fixed bottom-6 right-5 z-50 flex flex-col items-center gap-3 md:hidden">
     <!-- Top Button: Direct Phone Call -->
     <a href="tel:+919889829117" 
-       class="w-13 h-13 p-3 bg-slate-900 text-amber-400 border-2 border-amber-400 rounded-full shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all"
+       class="w-13 h-13 p-3 bg-slate-900 text-amber-400 border-2 border-amber-400 rounded-full shadow-2xl flex items-center justify-center pulse-blue hover:scale-105 active:scale-95 transition-all"
        aria-label="Direct Call to Adinath Enterprises">
       <span class="material-symbols-outlined text-2xl">call</span>
     </a>
@@ -1255,7 +1282,7 @@
     <!-- Bottom Button: WhatsApp Instant Chat -->
     <a href="https://wa.me/919889829117?text=Hello%20Adinath%20Enterprises,%20I%20am%20interested%20in%20solar%20installation%20in%20Kanpur." 
        target="_blank" 
-       class="relative w-14 h-14 p-3 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all"
+       class="relative w-14 h-14 p-3 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center pulse-green hover:scale-105 active:scale-95 transition-all"
        aria-label="Chat with Adinath Enterprises on WhatsApp">
       <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
         <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.35C9.37 7.35 9.11 7.41 8.88 7.66C8.65 7.91 8 8.52 8 9.77C8 11.02 8.91 12.22 9.03 12.39C9.16 12.56 10.8 15.08 13.3 16.16C13.9 16.42 14.36 16.57 14.73 16.69C15.33 16.88 15.87 16.85 16.3 16.79C16.79 16.71 17.81 16.17 18.02 15.57C18.23 14.97 18.23 14.46 18.17 14.35C18.1 14.25 17.94 14.19 17.7 14.07C17.45 13.95 16.25 13.36 16.02 13.28C15.8 13.19 15.63 13.15 15.47 13.39C15.3 13.64 14.83 14.19 14.69 14.35C14.54 14.52 14.4 14.54 14.15 14.42C13.91 14.3 12.88 13.96 11.66 12.87C10.72 12.03 10.08 10.99 9.9 10.68C9.72 10.37 9.88 10.2 10 10.08C10.11 9.97 10.25 9.79 10.37 9.65C10.5 9.5 10.54 9.4 10.62 9.23C10.7 9.06 10.66 8.92 10.6 8.8C10.54 8.67 10.06 7.5 9.87 7.03C9.67 6.57 9.47 6.63 9.32 6.62C9.18 6.62 9.01 6.62 8.85 6.62C8.68 6.62 8.41 6.68 8.18 6.93C7.95 7.18 7.3 7.79 7.3 9.04C7.3 10.29 8.21 11.49 8.33 11.66C8.46 11.83 10.1 14.35 12.6 15.43C15.1 16.51 15.1 16.15 15.54 16.11C16.38 16.03 17.4 15.49 17.61 14.89C17.82 14.29 17.82 13.78 17.76 13.67C17.7 13.56 17.54 13.5 17.3 13.38Z"/>
