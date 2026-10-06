@@ -1,0 +1,21 @@
+{
+  "name": "Adinath Enterprises - Solar EPC & Rooftop Solutions",
+  "short_name": "Adinath Solar",
+  "description": "Uttar Pradesh's trusted Solar EPC Contractor. Residential PM Surya Ghar DBT subsidy & Industrial turnkey solar installations in Kanpur, Etawah, and Varanasi.",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "favicon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

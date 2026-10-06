@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+  <!-- Home Page -->
+  <url>
+    <loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/images/hero-solar.jpg</image:loc>
+      <image:title>Rooftop Solar Installation in Kanpur by Adinath Enterprises</image:title>
+      <image:caption>Turnkey Solar EPC &amp; PM Surya Ghar Subsidy in Kanpur</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Company / About Page -->
+  <url>
+    <loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/company.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/images/prashant-singh-md.jpg</image:loc>
+      <image:title>Prashant Singh Managing Director Adinath Solar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/images/pawan-mishra-ceo.jpg</image:loc>
+      <image:title>Pawan Mishra Chief Executive Officer Adinath Solar</image:title>
+    </image:image>
+  </url>
+
+  <!-- Solar Solutions (Residential & C&I EPC) -->
+  <url>
+    <loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/solar-solutions.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/images/residential-solar.jpg</image:loc>
+      <image:title>PM Surya Ghar Rooftop Solar ₹78000 Subsidy Kanpur</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/images/industrial-solar.jpg</image:loc>
+      <image:title>Commercial &amp; Industrial Solar EPC Plants in UP</image:title>
+    </image:image>
+  </url>
+
+  <!-- Solar Products, Panels & Inverters -->
+  <url>
+    <loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/solar-products.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+    <image:image>
+      <image:loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/images/solar-panels.jpg</image:loc>
+      <image:title>TopCon Bifacial Solar Panels and Inverters Kanpur</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact & Multi-City Offices -->
+  <url>
+    <loc>https://mayankuttm1-bit.github.io/adinath-enterprises-solar/contact.html</loc>
+    <lastmod>2026-10-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+</urlset>

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Canonical Sitemap Location
+Sitemap: https://mayankuttm1-bit.github.io/adinath-enterprises-solar/sitemap.xml
